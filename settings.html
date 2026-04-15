@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elzero Template 4 Remake</title>
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/normalize.css">
+    <link rel="stylesheet" href="Css/main.css"> 
+    <link rel="stylesheet" href="Css/framework.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet">
+    <!-- Scripts -->
+    <script>
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("style") || "light")
+    </script>
+  </head>
+  <body data-theme="light">
+    <div class="page d-flex">
+      <div class="sidebar-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+      </div>
+      <!-- Start Sections -->
+      
+        <div class="sections-container align-center v-stack">
+          <!-- Start Settings section -->
+          <section class="settings-section w-full p-20">
+            <h1 class="section-name pb-20 mb-20 text-heading">Settings</h1>
+            <div class="content gap-20 v-stack">
+              <div class="profile-control gap-20 d-grid">
+                <div class="card profile-settings p-20 p-relative">
+                  <div class="card-head mb-20">
+                    <h2 class="text-heading fs-25 mb-10">Profile Information</h2>
+                    <p class="text-body">Control the website if there is maintenace</p>
+                    <ul class="invalid-msg">
+                      <li>Your name must have at least 2 letters for first and last name.</li>
+                      <li>Maximam letters 15 for first and last name.</li>
+                    </ul>
+                  </div>
+                  <div class="avatar d-flex align-center gap-20 mb-20">
+                    <div class="image">
+                      <img src="assets/images/profile-team-1.jpg" alt="">
+                    </div>
+                    <div class="text v-stack">
+                      <button class="change-avatar-btn align-center d-flex">Change Avatar</button>
+                      <span class="text-body">JPG, GIF or PNG. Max size 800K.</span>
+                    </div>
+                  </div>
+                  <div class="info v-stack gap-15 mb-20 pb-20">
+                    <div class="v-stack gap-5">
+                      <div class="d-flex align-center gap-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-body lucide lucide-user-icon lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span class="text-heading">Full Name</span>
+                      </div>
+                      <input class="info-input" type="text" placeholder="Enter your full name" value="Abdulrhman Omar" data-type="fullName">
+                    </div>
+                    <div class="v-stack gap-5">
+                      <div class="d-flex align-center gap-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-body lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                        <span class="text-heading">Email Address</span>
+                      </div>
+                      <input class="info-input" type="text" placeholder="o@nn.sa" value="aomar.stu@gmail.com" data-type="email">
+                    </div>
+                    <div class="v-stack gap-5">
+                      <div class="d-flex align-center gap-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-body lucide lucide-briefcase-icon lucide-briefcase"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+                        <span class="text-heading">Role</span>
+                      </div>
+                      <input  type="text" placeholder="e.g., Admine, Developer, Designer" value="Admin" disabled data-type="role">
+                    </div>
+                  </div>
+                  <div class="save-changes d-flex align-center space-between ">
+                    <span class="text-body">Changes will be reflected immediately across the dashboard.</span>
+                    <button class="d-flex align-center gap-5 p-10" id="save-info-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-save-icon lucide-save"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"/><path d="M7 3v4a1 1 0 0 0 1 1h7"/></svg>
+                      Save Changes
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card security-info p-20">
+                  <div class="card-head mb-25">
+                    <h2 class="text-heading fs-25">Security Info</h2>
+                    <p class="text-body">Security Information About Your Account</p>
+                  </div>
+                  <div class="sec-box between-flex mb-20 pb-25">
+                    <div class="text">
+                      <span class="text-heading">Password</span>
+                      <p class="text-body">Last Change On 25/10/2021</p>
+                    </div>
+                    <input type="submit" value="Change" class="Change-Btn button">
+                  </div>
+                  <div class="sec-box between-flex mb-20 pb-25">
+                    <div class="text">
+                      <span class="text-heading">Two-Factor Authentication</span>
+                      <p class="text-body">Enable/Disable The Feature</p>
+                    </div>
+                    <label>
+                      <input class="toggle-checkbox" type="checkbox" checked>
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </div>
+                  <div class="sec-box between-flex pb-25">
+                    <div class="text">
+                      <span class="text-heading">Devices</span>
+                      <p class="text-body">Check The Login Devices List</p>
+                    </div>
+                    <input type="submit" value="Devices" class="devices button">
+                  </div>
+                </div>
+              </div>
+              <div class="cards-container gap-20 d-grid">
+                <div class="card site-control p-20">
+                  <div class="card-head mb-25">
+                    <h2 class="text-heading fs-25 mb-10">Site Control</h2>
+                    <p class="text-body">Control the website if there is maintenace</p>
+                  </div>
+                  <div class="between-flex mb-20">
+                    <div class="text">
+                      <span class="text-heading">Website control</span>
+                      <p class="text-body">Open/Close website and type the reason</p>
+                    </div>
+                    <label>
+                      <input class="toggle-checkbox" type="checkbox" checked>
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </div>
+                  <div class="between-flex mb-20">
+                    <div class="text">
+                      <span class="text-heading">Notification Control</span>
+                      <p class="text-body">Open/Close Notification</p>
+                    </div>
+                    <label>
+                      <input class="toggle-checkbox" type="checkbox" checked>
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </div>
+                  <textarea name="" id="" placeholder="Close message content"></textarea>
+                </div>
+
+                <div class="card Social-Info p-20">
+                  <div class="card-head mb-25">
+                    <h2 class="text-heading fs-25">Social Info</h2>
+                    <p class="text-body">Social Media Information</p>
+                  </div>
+                  <div class="box d-flex mb-15">
+                    <i class="fa-brands fa-twitter center-flex c-grey"></i>
+                    <input class="w-full p-10" type="text" placeholder="Twitter Username">
+                  </div>
+                  <div class="box d-flex mb-15">
+                    <i class="fa-brands fa-facebook-f center-flex c-grey"></i>
+                    <input class="w-full p-10" type="text" placeholder="Facebook Username">
+                  </div>
+                  <div class="box d-flex mb-15">
+                    <i class="fa-brands fa-linkedin center-flex c-grey"></i>
+                    <input class="w-full p-10" type="text" placeholder="Linkedin Username">
+                  </div>
+                  <div class="box d-flex ">
+                    <i class="fa-brands fa-youtube center-flex c-grey"></i>
+                    <input class="w-full p-10" type="text" placeholder="Youtube Username">
+                  </div>
+                </div>
+
+                <div class="card widgets-control p-20">
+                  <div class="card-head mb-25">
+                    <h2 class="text-heading fs-25">Widgets Control</h2>
+                    <p class="text-body">Show/Hide Widgets</p>
+                  </div>
+                  <div class="opt mb-20 d-flex align-center gap-10">
+                    <input type="checkbox" id="one" data-widget="statistics-charts" checked>
+                    <label for="one" class="text-heading">Statistics Charts</label>
+                  </div>
+                  <div class="opt mb-20 d-flex  align-center gap-10">
+                    <input type="checkbox" id="two" data-widget="tickets-statistics" checked>
+                    <label for="two" class="text-heading">Tickets Statistics</label>
+                  </div>
+                  <div class="opt mb-20 d-flex  align-center gap-10">
+                    <input type="checkbox" id="three" data-widget="quick-draft" checked>
+                    <label for="three" class="text-heading">Quick Draft</label>
+                  </div>
+                  <div class="opt mb-20 d-flex align-center gap-10">
+                    <input type="checkbox"id="four"  data-widget="latest-tasks" checked>
+                    <label for="four" class="text-heading">Latest Tasks</label>
+                  </div>
+                  <div class="opt mb-20 d-flex align-center gap-10">
+                    <input type="checkbox" id="five" data-widget="projects" checked>
+                    <label for="five" class="text-heading">Projects</label>
+                  </div>
+                </div>
+
+                <!-- <div class="card general-info p-20 p-relative">
+                  <div class="card-head mb-25">
+                    <h2 class="text-heading fs-25 mb-10">General Info</h2>
+                    <p class="text-body">General Information About Your Account</p>
+                  </div>
+                  <div class="first-name field d-flex mb-15">
+                    <span class="text-heading">First Name</span>
+                    <input type="text" placeholder="First Name" data-type="f-name" disabled>
+                  </div>
+                  <div class="last-name field d-flex mb-15">
+                    <span class="text-heading">Last Name</span>
+                    <input type="text" placeholder="Last Name" data-type="l-name" disabled>
+                  </div>
+                  <div class="email field d-flex">
+                    <span class="text-heading">Email</span>
+                    <div class="email-field d-flex gap-10">
+                      <input type="text" placeholder="o@nn.sa"  data-type="email" disabled>
+                      <div class="wrongMail center-flex">Please enter a valid email.</div>
+                      <input type="submit" value="Change" class="Change-Btn button disabled">
+                    </div>
+                  </div>
+                </div> -->
+
+                <!-- <div class="card backup-manager p-20 ">
+                  <div class="card-head mb-25">
+                    <h2 class="text-heading fs-25">Backup Manager</h2>
+                    <p class="text-body">Control Backup time and location</p>
+                  </div>
+                  <div class="container v-stack gap-20 fs-15">
+                    <div class="options">
+                      <div class="opt mb-15">
+                        <input id="Daily" name="choice" type="radio">
+                        <label for="Daily">
+                          <span class="text-heading">Daily</span>
+                        </label>
+                      </div>
+                      <div class="opt mb-15">
+                        <input id="Weekly" name="choice" type="radio" checked>
+                        <label for="Weekly">
+                          <span class="text-heading">Weekly</span>
+                        </label>
+                      </div>
+                      <div class="opt mb-15">
+                        <input id="Monthly" name="choice" type="radio">
+                        <label for="Monthly">
+                          <span class="text-heading">Monthly</span>
+                        </label>
+                      </div>
+                    </div>
+    
+                    <div class="servers d-flex gap-10">
+                      <div class="server-opt">
+                        <input id="megamen" type="radio" name="server-choice">
+                        <label for="megamen" class="text-heading v-stack align-center">
+                          <i class="fa-solid fa-server d-block mb-10"></i>
+                          <span>Megaman</span>
+                        </label>
+                      </div>
+                      <div class="server-opt">
+                        <input id="zero" type="radio" name="server-choice" checked>
+                        <label for="zero" class="text-heading v-stack align-center">
+                          <i class="fa-solid fa-server d-block mb-10"></i>
+                          <span>Zero</span>
+                        </label>
+                      </div>
+                      <div class="server-opt">
+                        <input id="sigma" type="radio" name="server-choice">
+                        <label for="sigma" class="text-heading v-stack align-center">
+                          <i class="fa-solid fa-server d-block mb-10"></i>
+                          <span>Sigma</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </section>
+        <!-- End Settings sections -->
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

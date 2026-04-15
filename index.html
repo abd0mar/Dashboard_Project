@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elzero Template 4 Remake</title>
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/normalize.css">
+    <link rel="stylesheet" href="Css/main.css"> 
+    <link rel="stylesheet" href="Css/framework.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // Theme
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("style") || "light")
+    </script>
+  </head>
+  <body data-theme="light">
+    <div class="page d-flex">
+      <div class="sidebar-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+      </div>
+      <!-- Start Sections -->
+        <div class="sections-container align-center v-stack">
+          <!-- Start Settings section -->
+          <section class="dashboard-section p-20 w-full">
+            <h1 class="section-name pb-20 mb-20 text-heading">Dashboard</h1>
+            <div class="content v-stack gap-25">
+              <div class="status-cards-container d-grid txt-c gap-15">
+  
+                <div class="card p-20">
+                  <div class="head d-flex align-center space-between mb-15">
+                    <span class="text-body">Total Revenue</span>
+                    <div class="icon center-flex">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign-icon lucide-dollar-sign"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                  </div>
+                  <h2 class="text-heading">$291,000K</h2>
+                  <div class="d-flex align-center gap-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up-icon lucide-trending-up"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg>
+                    <span class="text-body">+15.5%</span>
+                    <span class="text-body">last month</span>
+                  </div>
+                </div>
+  
+                <div class="card p-20">
+                  <div class="head d-flex align-center space-between mb-15">
+                    <span class="text-body">Active Projects</span>
+                    <div class="icon center-flex">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-kanban-icon lucide-folder-kanban"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/><path d="M8 10v4"/><path d="M12 10v2"/><path d="M16 10v6"/></svg>
+                    </div>
+                  </div>
+                  <h2 class="text-heading">15</h2>
+                  <div class="d-flex align-center gap-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up-icon lucide-trending-up"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg>
+                    <span  class="text-body">+2.3%</span>
+                    <span class="text-body">last month</span>
+                  </div>
+                </div>
+  
+                <div class="card p-20">
+                  <div class="head d-flex align-center space-between mb-15">
+                    <span class="text-body">Support Tickets</span>
+                    <div class="icon center-flex">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-round-icon lucide-users-round"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></svg>
+                    </div>
+                  </div>
+                  <h2  class="text-heading">1,240</h2>
+                  <div class="d-flex align-center gap-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="color: var(--red-color)" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-down-icon lucide-trending-down"><path d="M16 17h6v-6"/><path d="m22 17-8.5-8.5-5 5L2 7"/></svg>
+                    <span class="text-body">-5.2%</span>
+                    <span class="text-body">last month</span>
+                  </div>
+                </div>
+  
+                <div class="card p-20">
+                  <div class="head d-flex align-center space-between mb-15">
+                    <span class="text-body">Team Productivity</span>
+                    <div class="icon center-flex">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up-icon lucide-trending-up"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg>
+                    </div>
+                  </div>
+                  <h2  class="text-heading">88%</h2>
+                  <div class="d-flex align-center gap-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18 " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up-icon lucide-trending-up"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg>
+                    <span class="text-body">+2.4%</span>
+                    <span class="text-body">last month</span>
+                  </div>
+                </div>
+              </div>
+              <div class="charts d-grid gap-20 widget" data-widget="statistics-charts">
+                <div class="p-20">
+                  <h2 class="fs-20 mb-20 text-heading">Revenue vs Expenses</h2>
+                  <canvas id="myBarChart"></canvas>
+                </div>
+                <div class="p-20">
+                  <h2 class="fs-20 mb-20 text-heading">Total Tickets</h2>
+                  <canvas id="myLineChart"></canvas>
+                </div>
+              </div>
+              <div class="cards-container gap-20">
+                <div class="tickets-statistics p-20 widget" data-widget="tickets-statistics">
+                  <div class="head mb-20">
+                    <h2 class="text-heading fs-20 mb-10">Tickets Statistics</h2>
+                    <span class="text-body">Everything About Support Tickets</span>
+                  </div>
+                  <div class="boxes d-grid gap-15">
+                    <div class="box p-20 txt-c">
+                      <svg style="color: var(--green-color);" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-10 lucide lucide-banknote-arrow-up-icon lucide-banknote-arrow-up"><path d="M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5"/><path d="M18 12h.01"/><path d="M19 22v-6"/><path d="m22 19-3-3-3 3"/><path d="M6 12h.01"/><circle cx="12" cy="12" r="2"/></svg>
+                      <h2 class="text-heading">291,000k</h2>
+                      <span class="text-body">Total Revenue</span>
+                    </div>
+                    <div class="box p-20 txt-c">
+                      <svg style="color: var(--red-color);" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-10 lucide lucide-banknote-arrow-down-icon lucide-banknote-arrow-down"><path d="M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5"/><path d="m16 19 3 3 3-3"/><path d="M18 12h.01"/><path d="M19 16v6"/><path d="M6 12h.01"/><circle cx="12" cy="12" r="2"/></svg>
+                      <h2 class="text-heading">163,000k</h2>
+                      <span class="text-body">Total Expenses</span>
+                    </div>
+                    <div class="box p-20 txt-c">
+                      <svg style="color: var(--accent-color);" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-10 lucide lucide-banknote-icon lucide-banknote"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+                      <h2 class="text-heading">128,000k</h2>
+                      <span class="text-body">Net Profit</span>
+                    </div>
+                    <div class="box p-20 txt-c">
+                      <svg style="color: var(--accent-color);" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-10 lucide lucide-ticket-check-icon lucide-ticket-check"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="m9 12 2 2 4-4"/></svg>
+                      <h2 class="text-heading">20,000</h2>
+                      <span class="text-body">Avg Tickets</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="quick-draft p-20 widget" data-widget="quick-draft">
+                  <div class="head mb-20">
+                    <h2 class="text-heading fs-20 mb-10">Quick Draft</h2>
+                    <span class="text-body">Write A Draft For Your Ideas</span>
+                  </div>
+                  <form class="v-stack gap-15">
+                    <input class="p-10" type="text" placeholder="Title">
+                    <textarea class="p-10" id="" placeholder="Your Thoughts"></textarea>
+                    <button>Save</button>
+                  </form>
+                </div>
+                <div class="latest-tasks v-stack p-20 widget" data-widget="latest-tasks">
+                  <div class="head pb-5">
+                    <h2 class="text-heading fs-20 mb-10">Latest Tasks</h2>
+                  </div>
+                  <div class="tasks v-stack gap-10">
+                    <div id="task-1" class="task p-15 d-flex align-center space-between">
+                      <div>
+                        <h2 class="text-heading mb-5">Review March Financials</h2>
+                        <span class="text-body">Analyze revenue vs expenses variance</span>
+                      </div>
+                      <input id="task-one" type="checkbox" class="task-checkbox">
+                      <label for="task-one"></label>
+                    </div>
+
+                    <div id="task-2" class="task p-15 d-flex align-center space-between">
+                      <div class="txt">
+                        <h2 class="text-heading mb-5">Support Ticket Audit</h2>
+                        <span class="text-body">Review the spike in tickets from March</span>
+                      </div>
+                      <input id="task-two" type="checkbox" class="task-checkbox">
+                      <label for="task-two"></label>
+                    </div>
+
+                    <div id="task-3" class="task p-15 d-flex align-center space-between">
+                      <div class="txt">
+                        <h2 class="text-heading mb-5">Q2 Budget Planning</h2>
+                        <span class="text-body">Allocate funds for the upcoming quarter</span>
+                      </div>
+                      <input id="task-three" type="checkbox" class="task-checkbox">
+                      <label for="task-three"></label>
+                    </div>
+
+                    <div id="task-4" class="task p-15 d-flex align-center space-between">
+                      <div class="txt">
+                        <h2 class="text-heading mb-5">Fix Database Bottleneck</h2>
+                        <span class="text-body">Optimize query performance for charts</span>
+                      </div>
+                      <input id="task-four" type="checkbox" class="task-checkbox">
+                      <label for="task-four"></label>
+                    </div>
+
+                    <div id="task-5" class="task p-15 d-flex align-center space-between">
+                      <div class="txt">
+                        <h2 class="text-heading mb-5">Customer Feedback Sync</h2>
+                        <span class="text-body">Aggregate survey data from March</span>
+                      </div>
+                      <input id="task-five" type="checkbox" class="task-checkbox">
+                      <label for="task-five"></label>
+                    </div>
+
+                    <div id="task-6" class="task p-15 d-flex align-center space-between">
+                      <div class="txt">
+                        <h2 class="text-heading mb-5">System Security Update</h2>
+                        <span class="text-body">Apply patches to the support portal</span>
+                      </div>
+                      <input id="task-six" type="checkbox" class="task-checkbox">
+                      <label for="task-six"></label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="projects-box p-20 widget" data-widget="projects">
+                <h2 class="text-heading fs-20 mb-20">Projects</h2>
+                <div class="projects-table">
+                  <table id="table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Finish Date</th>
+                        <th>Client</th>
+                        <th>Price</th>
+                        <th>Team</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+        <!-- End Settings sections -->
+        </div>
+    </div>
+    <script>
+      // Bar Chart---------------------------------->
+      let ctx = document.querySelector("#myBarChart")
+      let myBarChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Aug", "Sep", "Oct", "Nov"],
+          datasets: [{
+            label: 'Total Revenue',
+            data: [45000, 52000, 49000, 55000, 50000, 40000, 42000, 39000, 51000, 47200],
+            backgroundColor: "#7770f3",
+            borderRadius: 5,
+            borderWidth: 1
+          },
+          {
+            label: 'Total Expenses',
+            data: [32900, 36300, 23900, 29500, 26100, 20200, 22700, 28800, 23200, 31000],
+            backgroundColor: "#ff6565",
+            borderRadius: 5,
+          }
+        ]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y:{
+              ticks: {color:"#777"},
+              grid: {color:"#77777748"}
+            },
+            x:{
+              ticks: {color:"#777"},
+              grid: {color:"#77777748"}
+            }
+          }
+        }
+      })
+      // Line Chart---------------------------------->
+      let ctx1 = document.querySelector("#myLineChart")
+      let myLineChart = new Chart(ctx1, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          datasets: [{
+            label: 'Total Tickets',
+            data: [18000, 21000, 24000, 19000, 22000, 17000, 19000, 23000, 25000, 20000, 18000, 14000],
+            backgroundColor:"#10B981",
+            pointRadius: 5,
+            pointBorderWidth: 3,
+            pointBorderColor: 'white',
+            hoverOffset: 4,
+            borderColor: "#10B981",
+            tension: 0.3,
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y:{
+              ticks: {color:"#777"},
+              grid: {color:"#77777748"}
+            },
+            x:{
+              ticks: {color:"#777"},
+              grid: {color:"#77777748"}
+            }
+          }
+        }
+      })
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

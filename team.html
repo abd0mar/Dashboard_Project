@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elzero Template 4 Remake</title>
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/normalize.css">
+    <link rel="stylesheet" href="Css/main.css"> 
+    <link rel="stylesheet" href="Css/framework.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet">
+    <!-- Scripts -->
+    <script>
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("style") || "light")
+    </script>
+  </head>
+  <body data-theme="light">
+    <div class="page d-flex">
+      <div class="sidebar-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+      </div>
+      <!-- Start Sections -->
+        <div class="sections-container align-center v-stack">
+          <!-- Start Settings section -->
+          <section class="team-section p-20 w-full">
+            <h1 class="section-name pb-20 mb-20 text-heading">Team</h1>
+            <div class="content v-stack gap-25">
+              <div class="sec-search p-20 d-flex gap-10">
+                <input id="team-search-input" type="text" placeholder="Search team member by name">
+                <select  name="team-filter" id="team-filter">
+                  <option value="All">All</option>
+                  <option value="Pending">Away</option>
+                  <option value="In Progress">Online</option>
+                  <option value="Completed">Offline</option>
+                </select>
+              </div>
+              <div class="team-container d-grid gap-15" id="team-container">
+              </div>
+            </div>
+          </section>
+        </div>
+    <script src="js/main.js"></script>
+  </body>
+</html> 

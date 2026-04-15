@@ -1,0 +1,91 @@
+[
+    { 
+        "title": "Finance App",
+        "date": "15 Mar 2026",
+        "client": "Bouba",
+        "price": "$5,000",
+        "status": "Pending",
+        "progress": "80",
+        "description": "A mobile banking app with real-time analytics, budget tracking, and secure transaction history"
+    },
+    { 
+        "title": "Support Portal",
+        "date": "20 Apr 2026",
+        "client": "Tech Co",
+        "price": "$3,500",
+        "status": "In Progress",
+        "progress": "75",
+        "description": "A customer support ticketing system with live chat, priority queues, and agent dashboards."
+    },
+    { 
+        "title": "Dashboard UI",
+        "date": "05 Feb 2026",
+        "client": "Moamen",
+        "price": "$1,200",
+        "status": "Completed",
+        "progress": "90",
+        "description": "A clean admin dashboard with data visualizations, user management, and reporting tools."
+    },
+    { 
+        "title": "Old Website",
+        "date": "10 Jan 2026",
+        "client": "Private",
+        "price": "$800",
+        "status": "Rejected",
+        "progress": "95",
+        "description": "A legacy website redesign project — archived due to client-side scope changes."
+    },
+    { 
+        "title": "Mobile App UI",
+        "date": "18 May 2026",
+        "client": "FitLife",
+        "price": "$2,900",
+        "status": "In Progress",
+        "progress": "100",
+        "description": "A fitness tracking app UI with workout plans, progress charts, and social challenges."
+    },
+    { 
+        "title": "Security Audit",
+        "date": "25 Jun 2026",
+        "client": "NetSecure",
+        "price": "$4,100","status": "Pending",
+        "progress": "85",
+        "description": "A full security audit and penetration testing report for a financial SaaS platform."
+    },
+    { 
+        "title": "E-Commerce Migration",
+        "date": "12 Jul 2026",
+        "client": "ShopSphere",
+        "price": "$5,500",
+        "status": "In Progress",
+        "progress": "60",
+        "description": "Migrating a legacy monolithic store to a modern headless architecture using Next.js."
+    },
+    { 
+        "title": "Mobile App Redesign",
+        "date": "05 Aug 2026",
+        "client": "FitTrack",
+        "price": "$3,200",
+        "status": "Completed",
+        "progress": "100",
+        "description": "Complete UI/UX overhaul of the fitness tracking app to improve user retention."
+    },
+    { 
+        "title": "Cloud Infrastructure Setup",
+        "date": "18 Sep 2026",
+        "client": "DataStream AI",
+        "price": "$7,800",
+        "status": "Pending",
+        "progress": "15",
+        "description": "Designing and deploying a scalable AWS infrastructure with automated CI/CD pipelines."
+    },
+    { 
+        "title": "Custom CRM Dashboard",
+        "date": "14 Nov 2026",
+        "client": "Elite Real Estate",
+        "price": "$6,000",
+        "status": "In Progress",
+        "progress": "45",
+        "description": "Developing a bespoke management dashboard for lead tracking and agent performance."
+    }
+]

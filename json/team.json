@@ -1,0 +1,50 @@
+[
+    { 
+        "title": "Abdoulrhman Omar",
+        "position": "Project Manager",
+        "email": "abdo.o@company.com" ,
+        "projects": "10" ,
+        "status": "Ofline",
+        "id": "1"
+    },
+    { 
+        "title": "Moamen Ashrf",
+        "position": "Fullstack Developer",
+        "email": "moamen.a@company.com" ,
+        "projects": "9" ,
+        "status": "Online",
+        "id": "2"
+    },
+    { 
+        "title": "Ahmed Mohamed",
+        "position": "Backend Developer",
+        "email": "ahmed.m@company.com" ,
+        "projects": "10" ,
+        "status": "Away",
+        "id": "3"
+    },
+    { 
+        "title": "Osama Mohamed",
+        "position": "Fronend Developer",
+        "email": "abdo.o@company.com" ,
+        "projects": "7" ,
+        "status": "Ofline",
+        "id": "4"
+    },
+    { 
+        "title": "Abdullah Saed",
+        "position": "UI/UX Designer",
+        "email": "abdo.o@company.com" ,
+        "projects": "11" ,
+        "status": "Online",
+        "id": "5"
+    },
+    { 
+        "title": "Hussen Ashraf",
+        "position": "Marketing Specialist",
+        "email": "abdo.o@company.com" ,
+        "projects": "10" ,
+        "status": "Online",
+        "id": "6"
+    }
+]

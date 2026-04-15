@@ -1,0 +1,15 @@
+What i need?
+- search bar
+- Prjects that have been showen in projects tabel
+
+
+How can i make it?
+1 - Make an array have object for each project
+2 - Object have (Name, Date, Clint, Progress value)
+3 - Delete HTML text
+4 - Make a render function => returns ojects that fits with search value.
+
+
+Render function
+1 - takes values and make it DOM
+
