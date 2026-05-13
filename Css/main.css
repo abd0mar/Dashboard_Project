@@ -727,7 +727,7 @@ section .section-name::after {
   padding-top: 0;
   overflow-y: scroll;
 }
-.latest-tasks .task {
+.latest-tasks .task:not(:last-child){
   border-bottom: 1px solid var(--border-color);
 }
 .latest-tasks .task.done h2 {

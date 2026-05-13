@@ -461,7 +461,7 @@ class TeamSearch extends searchParent{
     this.statusMap = {
       "away": { bg: "var(--bg-orange)",  color: "var(--orange-color)"},
       "online": { bg: "var(--bg-green)", color: "var(--green-color)"},
-      "ofline": { bg: "var(--bg-red)",   color: "var(--red-color)"},
+      "offline": { bg: "var(--bg-red)",   color: "var(--red-color)"},
     };
 
     this.init()

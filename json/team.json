@@ -4,7 +4,7 @@
         "position": "Project Manager",
         "email": "abdo.o@company.com" ,
         "projects": "10" ,
-        "status": "Ofline",
+        "status": "Offline",
         "id": "1"
     },
     { 
@@ -28,7 +28,7 @@
         "position": "Fronend Developer",
         "email": "abdo.o@company.com" ,
         "projects": "7" ,
-        "status": "Ofline",
+        "status": "Offline",
         "id": "4"
     },
     { 
