@@ -8,11 +8,9 @@ async function loadNav(){
     let htmlText = await response.text();
     let parser = new DOMParser();
     let doc = parser.parseFromString(htmlText, "text/html");
-    // let selectNav = doc.querySelector("nav");
     let selectSideBar = doc.querySelector(".sidebar");
     let notificationMenu = doc.querySelector("#notifications-menu");
 
-    // document.querySelector(".page .sections-container").prepend(selectNav);
     document.querySelector(".page").prepend(selectSideBar)
     document.querySelector(".page").prepend(notificationMenu)
 
@@ -100,12 +98,6 @@ new Sidebar().init()
     this.icon.addEventListener("click", () => {
       this.menu.classList.toggle("active");
     })
-    // document.addEventListener("click", (e) => {
-    //   console.log("fine")
-    //   if(!e.target.closest(`#${this.menu.id}`) && !e.target.closest(`#${this.icon.id}`) ){
-    //     this.menu.classList.remove("active");
-    //   }
-    // })
   }
   unreadChk(){
     let messages  = this.menu.querySelectorAll(".msg")
