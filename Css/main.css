@@ -120,6 +120,10 @@ input[type="text"] {
   transition-duration: 0.3s;
   font-weight: 600;
 }
+.sections-container {
+  flex-grow: 1;
+  min-width: 0;
+}
 section .section-name {
   position: relative;
   font-size: 3rem;
@@ -319,6 +323,72 @@ section .section-name::after {
   animation: sidebarIcon 0.5s 1 linear;
   width: 1.9rem;
 }
+
+.sidebar .customize{
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 15px;
+  border-top: 1px solid var(--border-color);
+  justify-content: center;
+  margin-top: auto;
+  align-items: start;
+  gap: 10px;
+}
+.sidebar .customize div:first-child{
+  display: flex;
+  gap: 10px;
+}
+.profile {
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+
+.image-wrapper {
+  width: 4.5rem;
+  height: 4.5rem;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+}
+.image-wrapper img{
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.profile .info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.profile .info span:first-child {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+.profile .info span:last-child {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.icn {
+  padding: 1.8rem;
+  width: 1rem;
+  height: 2rem;
+  background: var(--color-secondary);
+  border-radius: 1rem;
+  color: var(--text-primary);
+  transition: 0.2s;
+  cursor: pointer;
+  will-change: transform;
+  border: 1px solid var(--border-color);
+}
+
+.icn:hover {
+  transform: translateY(-2px);
+  color: var(--accent-alt-color);
+}
 /* Media Query */
 @media (max-width: 1100px) and (min-width: 736px) {
   .sidebar {
@@ -335,6 +405,7 @@ section .section-name::after {
   }
   .sidebar .pagesLinks {
     align-items: center;
+    gap: 10px;
   }
   .sidebar li.active a {
     padding: 0.8rem;
@@ -349,6 +420,9 @@ section .section-name::after {
     width: 3rem;
   }
   .sidebar a:hover svg {
+    width: 3rem;
+  }
+  .sidebar li:not(.active):hover svg{
     width: 3rem;
   }
 }
@@ -376,13 +450,9 @@ section .section-name::after {
 }
 
 /* ================================== */
-/* Start NavBar */
+/* Start Notification Menu */
 /* ================================== */
-.sections-container {
-  flex-grow: 1;
-  min-width: 0;
-}
-nav {
+/* nav {
   position: fixed;
   display: flex;
   align-items: center;
@@ -396,67 +466,12 @@ nav {
   border-radius: var(--rad);
   border: 1px solid var(--border-color);
   backdrop-filter: blur(15px);
-}
-nav .profile {
-  transition: 0.2s;
-  cursor: pointer;
-  /* background: var(--color-secondary); */
-}
-nav .profile:hover {
-  background-color: var(--color-primary-alt);
-}
-nav .image-wrapper {
-  width: 4rem;
-  height: 4rem;
-  overflow: hidden;
-  border-radius: 50%;
-}
-nav .profile span {
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-/* nav .search {
-  border: 1px solid var(--border-color);
-  padding: 0.7rem;
-  border-radius: var(--rad);
-}
-nav .search input {
-  border: none;
-  font-size: 1.5rem;
-  width: 12rem;
-  background-color: transparent;
-  color: var(--text-secondary);
-}
-nav .search input:focus {
-  outline: none;
-}
-nav .search:focus-within {
-  border-color: var(--accent-color);
-}
-nav .search i {
-  font-size: 1.5rem;
-  color: #777;
 } */
-nav .icn {
-  padding: 1.8rem;
-  width: 1rem;
-  height: 2rem;
-  background: var(--color-secondary);
-  border-radius: 1rem;
-  color: var(--text-primary);
-  transition: 0.2s;
-  cursor: pointer;
-  will-change: transform;
-}
-nav .icn:hover {
-  transform: translateY(-2px);
-  color: var(--accent-alt-color);
-}
 
 .notifications-menu {
   visibility: hidden;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   background: var(--color-primary);
@@ -465,9 +480,11 @@ nav .icn:hover {
   border: 1px solid var(--border-color);
   box-shadow: var(--box-shadow);
   transition: 0.2s;
-  top: 9rem;
+  bottom: 3rem;
   overflow: hidden;
   transform: scale(1.1);
+  left: 28rem;
+  z-index: 100;
 }
 .notifications-menu.active {
   visibility: visible;
@@ -579,23 +596,6 @@ nav .icn:hover {
 .content span.date {
   color: rgb(153, 153, 153);
 }
-
-/* Media Query */
-
-/* @media (max-width: 950px) {
-  nav .search {
-    display: none;
-  }
-  nav {
-    justify-content: center;
-    width: fit-content;
-  }
-  nav div:nth-child(2) {
-    gap: 10px;
-  }
-} */
-
-/* End Navbar */
 
 /* ================================== */
 /* Start Dashboard section */

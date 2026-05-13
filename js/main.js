@@ -8,11 +8,13 @@ async function loadNav(){
     let htmlText = await response.text();
     let parser = new DOMParser();
     let doc = parser.parseFromString(htmlText, "text/html");
-    let selectNav = doc.querySelector("nav")
-    let selectSideBar = doc.querySelector(".sidebar")
+    // let selectNav = doc.querySelector("nav");
+    let selectSideBar = doc.querySelector(".sidebar");
+    let notificationMenu = doc.querySelector("#notifications-menu");
 
-    document.querySelector(".page .sections-container").prepend(selectNav);
+    // document.querySelector(".page .sections-container").prepend(selectNav);
     document.querySelector(".page").prepend(selectSideBar)
+    document.querySelector(".page").prepend(notificationMenu)
 
     let windowUrl = window.location.pathname.split("/")
     let pageName = windowUrl[windowUrl.length - 1].split(".")[0].toLowerCase()
@@ -98,11 +100,12 @@ new Sidebar().init()
     this.icon.addEventListener("click", () => {
       this.menu.classList.toggle("active");
     })
-    document.addEventListener("click", (e) => {
-      if(!e.target.closest(`#${this.menu.id}`) && !e.target.closest(`#${this.icon.id}`) ){
-        this.menu.classList.remove("active");
-      }
-    })
+    // document.addEventListener("click", (e) => {
+    //   console.log("fine")
+    //   if(!e.target.closest(`#${this.menu.id}`) && !e.target.closest(`#${this.icon.id}`) ){
+    //     this.menu.classList.remove("active");
+    //   }
+    // })
   }
   unreadChk(){
     let messages  = this.menu.querySelectorAll(".msg")
@@ -180,16 +183,18 @@ class Style{
 // ========================
 // tasks checkbox
 // ========================
-let checkbox = document.querySelectorAll(".tasks .task-checkbox")
-if(checkbox){
-  checkbox.forEach((e) => {
-    function taskCheckbox(){
-      e.parentElement.classList.toggle("done")
-    }
-    e.addEventListener("change", () => taskCheckbox())
-  })
+function tesksCheckbox (){
+  let checkbox = document.querySelectorAll(".tasks .task-checkbox");
+  if(checkbox){
+    checkbox.forEach((e) => {
+      function taskCheckbox(){
+        e.parentElement.classList.toggle("done")
+      }
+      e.addEventListener("change", () => taskCheckbox())
+    })
+  }
 }
-
+tesksCheckbox()
 
 
 
@@ -240,11 +245,8 @@ class infoSetting{
       }
     })
       if(Object.values(this.info).length > 0 && !Object.values(this.info).includes("invalid")){
-        // let userName = this.info.fullName.split(" ").map((word) => (word[0].toUpperCase() + word.slice(1 , word.length))).join(" ")
         this.info.fullName = this.info.fullName.split(" ").map((word) => (word[0].toUpperCase() + word.slice(1 , word.length))).join(" ")
-        // localStorage.setItem("userName", userName);
         this.userNameSpan.textContent = this.info.fullName;
-
         localStorage.setItem("info", JSON.stringify(this.info))
       }
   }
@@ -329,7 +331,7 @@ class searchParent{
         if(this.search.value === ""){
           this.renderDefault();
         }else{
-          let filteredObjects = this.projects.filter(project => project.title.toLowerCase().includes((this.search.value).toLowerCase()))
+          let filteredObjects = this.ele.filter(project => project.title.toLowerCase().includes((this.search.value).toLowerCase()))
           filteredObjects.forEach(e => {
             this.render(e);
           })
@@ -342,7 +344,7 @@ class searchParent{
         if(this.filter.value.toLowerCase() === "all"){
           this.renderDefault();
         }else{
-          let filteredObjects = this.projects.filter(project => project.status.toLowerCase().includes((this.filter.value).toLowerCase()))
+          let filteredObjects = this.ele.filter(project => project.status.toLowerCase().includes((this.filter.value).toLowerCase()))
           filteredObjects.forEach(e => {
             this.render(e);
           })
@@ -378,23 +380,8 @@ class searchParent{
 
 class ProjectsSearch extends searchParent{
   constructor(searchInput, filter, container){
-    super(searchInput, filter, container, "json/projects.json")
+    super(searchInput, filter, container, "./json/projects.json")
     //Section Elements
-
-    this.ele = [];
-
-    // this.projects = [
-    //   { title: "Finance App",date: "15 Mar 2026",client: "Bouba",price: "$5,000",status: "Pending",progress: "80",description: "A mobile banking app with real-time analytics, budget tracking, and secure transaction history"},
-    //   { title: "Support Portal",date: "20 Apr 2026",client: "Tech Co",price: "$3,500",status: "In Progress",progress: "75",description: "A customer support ticketing system with live chat, priority queues, and agent dashboards."},
-    //   { title: "Dashboard UI",date: "05 Feb 2026",client: "Moamen",price: "$1,200",status: "Completed",progress: "90",description: "A clean admin dashboard with data visualizations, user management, and reporting tools."},
-    //   { title: "Old Website",date: "10 Jan 2026",client: "Private",price: "	$800",status: "Rejected",progress: "95",description: "A legacy website redesign project — archived due to client-side scope changes."},
-    //   { title: "Mobile App UI",date: "18 May 2026",client: "FitLife",price: "$2,900",status: "In Progress",progress: "100",description: "A fitness tracking app UI with workout plans, progress charts, and social challenges."},
-    //   { title: "Security Audit",date: "25 Jun 2026",client: "NetSecure",price: "$4,100",status: "Pending",progress: "85",description: "A full security audit and penetration testing report for a financial SaaS platform."},
-    //   { title: "E-Commerce Migration",date: "12 Jul 2026",client: "ShopSphere",price: "$5,500",status: "In Progress",progress: "60",description: "Migrating a legacy monolithic store to a modern headless architecture using Next.js."},
-    //   { title: "Mobile App Redesign",date: "05 Aug 2026",client: "FitTrack",price: "$3,200",status: "Completed",progress: "100",description: "Complete UI/UX overhaul of the fitness tracking app to improve user retention."},
-    //   { title: "Cloud Infrastructure Setup",date: "18 Sep 2026",client: "DataStream AI",price: "$7,800",status: "Pending",progress: "15",description: "Designing and deploying a scalable AWS infrastructure with automated CI/CD pipelines."},
-    //   { title: "Custom CRM Dashboard",date: "14 Nov 2026",client: "Elite Real Estate",price: "$6,000",status: "In Progress",progress: "45",description: "Developing a bespoke management dashboard for lead tracking and agent performance."}
-    // ];
 
     this.statusMap = {
       "completed":  { bg: "var(--bg-green)",  color: "var(--green-color)",  bar: "linear-gradient(90deg, #71717A, #71717A80)" },
@@ -472,22 +459,12 @@ class ProjectsSearch extends searchParent{
     this.tableBody.append(myTr);
   }
 }
+
 new ProjectsSearch("#projects-search-input", "#projects-filter", "#projects-container")
 
 class TeamSearch extends searchParent{
   constructor(searchInput, filter, container){
     super(searchInput, filter, container, "json/team.json")
-
-
-    this.ele = []
-    // this.ele = [
-    //   { title: "Abdoulrhman Omar", position: "Project Manager", email: "abdo.o@company.com" ,projects: "10" ,status: "Ofline", id: "1"},
-    //   { title: "Moamen Ashrf", position: "Fullstack Developer", email: "moamen.a@company.com" ,projects: "9" ,status: "Online", id: "2"},
-    //   { title: "Ahmed Mohamed", position: "Backend Developer", email: "ahmed.m@company.com" ,projects: "10" ,status: "Away", id: "3"},
-    //   { title: "Osama Mohamed", position: "Fronend Developer", email: "abdo.o@company.com" ,projects: "7" ,status: "Ofline", id: "4"},
-    //   { title: "Abdullah Saed", position: "UI/UX Designer", email: "abdo.o@company.com" ,projects: "11" ,status: "Online", id: "5"},
-    //   { title: "Hussen Ashraf", position: "Marketing Specialist", email: "abdo.o@company.com" ,projects: "10" ,status: "Online", id: "6"},
-    // ]
 
     this.statusMap = {
       "away": { bg: "var(--bg-orange)",  color: "var(--orange-color)"},

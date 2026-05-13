@@ -6,13 +6,11 @@
   <title>Document</title>
 </head>
 <body>
-  <nav>
+  <!-- <nav>
     <div class="center-flex p-relative gap-10 ">
       <div class="darkmode-btn icn center-flex fs-15">
-
         <i class="fa-regular fa-moon"></i>
       </div>
-      <!-- <div class="separator" style="height: 3rem; width: 2px; background-color: var(--text-primary);"></div> -->
       <div id="notifications-icon" class="notifications-icon icn center-flex fs-15">
         <i class="fa-regular fa-bell fa-lg"></i>
       </div>
@@ -63,8 +61,7 @@
         <span class="text-heading" id="username">Abdulrhman Omar</span>
       </div>
     </div>
-  </nav>
-
+  </nav> -->
   <div class="sidebar v-stack">
     <div class="logo-container d-flex txt-c align-center gap-10 p-20">
       <div class="logo">A</div>
@@ -114,6 +111,81 @@
         </a>
       </li> -->
     </ul>
+    <div class="customize">
+      <div>
+        <div class="darkmode-btn icn center-flex fs-15">
+          <i class="fa-regular fa-moon"></i>
+        </div>
+        <div id="notifications-icon" class="notifications-icon icn center-flex fs-15">
+          <i class="fa-regular fa-bell fa-lg"></i>
+        </div>
+      </div>
+      <div class="profile center-flex gap-10 rad-10">
+        <div class="image-wrapper">
+          <img src="assets/images/profile-team-1.jpg" alt="">
+        </div>
+        <div class="info">
+          <span id="username">Abdulrhman Omar</span>
+          <span id="username">Fronend Developer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="notifications-menu" class="notifications-menu">
+    <div class="notifications-header">
+      <h3 class="text-heading p-15 fs-15">Notifications</h3>
+      <ul class="taps d-flex ">
+        <li class="text-heading active p-10" data-id="all">All</li>
+        <li class="text-heading p-10" data-id="unread">Unread</li>
+        <li class="text-heading p-10" data-id="archived">Archived</li>
+      </ul>
+    </div>
+    <div id="notifications-body" class="notifications-body">
+      <div class="msg unread p-notification gap-10 center-flex">
+        <div class="icon rad-half center-flex">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-circle-check-big w-5 h-5"
+            data-fg-b3mp1="1.29:1.13588:/src/app/components/NotificationCenter.tsx:167:16:4668:69:e:CheckCircle::::::C4Wc"
+            style="color: rgb(34, 197, 94);">
+            <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+            <path d="m9 11 3 3L22 4"></path>
+          </svg>
+        </div>
+        <div class="v-stack gap-5">
+          <h4 class="text-heading">Design assets approved</h4>
+          <span class="text-body">Your design submission has been approved by the team lead.</span>
+          <span class="date text-body">1h ago</span>
+        </div>
+        <div class="actions d-flex">
+          <i class="fa-solid fa-trash-can trash"></i>
+          <i class="fa-solid fa-box-archive archive"></i>
+        </div>
+      </div>
+      <div class="msg unread p-notification gap-10 center-flex">
+        <div class="icon rad-half center-flex">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-bell w-5 h-5"
+            data-fg-b3mp4="1.29:1.13588:/src/app/components/NotificationCenter.tsx:173:16:4977:61:e:Bell::::::CiHR"
+            style="color: rgb(0, 117, 255);">
+            <path d="M10.268 21a2 2 0 0 0 3.464 0"></path>
+            <path
+              d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326">
+            </path>
+          </svg>
+        </div>
+        <div class="v-stack gap-5">
+          <h4 class="text-heading">New message from Emily</h4>
+          <span class="text-body">Hey! I have some questions about the notification design.</span>
+          <span class="date text-body">Yesterday</span>
+        </div>
+        <div class="actions d-flex">
+          <i class="fa-solid fa-trash-can trash"></i>
+          <i class="fa-solid fa-box-archive archive"></i>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
